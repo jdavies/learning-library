@@ -37,14 +37,14 @@ To create a VCN on Oracle Cloud Infrastructure:
 
 3. Complete the following fields:
 
-    |                  **Field**              |    **Vaue**  |
-    |----------------------------------------|:------------:|
-    |VCN NAME |OCI_HOL_VCN|
-    |COMPARTMENT |  Choose the ***Demo*** compartment you created in the [Identity Lab](../Identity_Access_Management/IAM_HOL.md)
-    |VCN CIDR BLOCK|10.0.0.0/16|
-    |PUBLIC SUNBET CIDR BLOCK|10.0.2.0/24|
-    |PRIVATE SUBNET CIDR BLOCK|10.0.1.0/24
-    |USE DNS HOSTNAMES IN THIS VCN| Checked|
+    | **Field**                     |                                                   **Value**                                                   |
+    | ----------------------------- | :-----------------------------------------------------------------------------------------------------------: |
+    | VCN NAME                      |                                                  OCI_HOL_VCN                                                  |
+    | COMPARTMENT                   | Choose the ***Demo*** compartment you created in the [Identity Lab](../Identity_Access_Management/IAM_HOL.md) |
+    | VCN CIDR BLOCK                |                                                  10.0.0.0/16                                                  |
+    | PUBLIC SUNBET CIDR BLOCK      |                                                  10.0.2.0/24                                                  |
+    | PRIVATE SUBNET CIDR BLOCK     |                                                  10.0.1.0/24                                                  |
+    | USE DNS HOSTNAMES IN THIS VCN |                                                    Checked                                                    |
 
     Your screen should look similar to the following:
 
