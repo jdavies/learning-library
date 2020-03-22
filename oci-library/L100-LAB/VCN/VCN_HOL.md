@@ -15,6 +15,8 @@ Oracle Cloud Infrastructure Compute lets you create multiple Virtual Cloud Netwo
 
 Be sure to review [Overview of Networking](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) to gain a full understanding of the network components and their relationships.
 
+> **Note:** There is a Youtube video of this lab located here: [https://youtu.be/BAdm0oAsuF8](https://youtu.be/BAdm0oAsuF8)
+
 ## Pre-Requisites
 
 To sign in to the Console, you need the following:

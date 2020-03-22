@@ -16,24 +16,26 @@ When you work with Oracle Cloud Infrastructure, one of the first steps is to set
 
 **Note:** *Some of the UIs might look a little different than the screen shots included in the instructions, but you can still use the instructions to complete the hands-on labs.*
 
+> **Note:** There is a Youtube video of this lab located here: [https://youtu.be/BAdm0oAsuF8](https://youtu.be/BAdm0oAsuF8)
+
 ## Pre-Requisites
 
-- Oracle Cloud Infrastructure account credentials (User, Password, and Tenant) 
+- Oracle Cloud Infrastructure account credentials (User, Password, and Tenant)
   - To sign in to the Console, you need the following:
-  -  Tenant, User name and Password
-  -  URL for the Console: [https://cloud.oracle.com/](https://cloud.oracle.com/)
-  -  Oracle Cloud Infrastructure supports the latest versions of Google Chrome, Firefox and Internet Explorer 11 
+  - Tenant, User name and Password
+  - URL for the Console: [https://cloud.oracle.com/](https://cloud.oracle.com/)
+  - Oracle Cloud Infrastructure supports the latest versions of Google Chrome, Firefox and Internet Explorer 11
 
 ## Practice 1: Create a Virtual Cloud Network
 
 A Virtual Cloud Network (VCN) is a virtual version of a traditional network including subnets, route tables, and gateways on which your compute instances run. Customers can bring their network topology to the cloud with VCN. Creating a VCN involves a few key aspects such as:
 
- - Allocate a private IP block for the VCN (CIDR range for the VCN).
- - Customers can bring their own RFC1918 IP addresses.
- - Create Subnets by partitioning the CIDR range into smaller networks (sub networks for front end, back end, database)
- - Create an optional Internet Gateway to connect VCN subnet with Internet. Instances created in this subnet will have a public IP address.
- - Create Route table with route rules for Internet access
- - Create Security List to allow relevant ports for ingress and egress access
+- Allocate a private IP block for the VCN (CIDR range for the VCN).
+- Customers can bring their own RFC1918 IP addresses.
+- Create Subnets by partitioning the CIDR range into smaller networks (sub networks for front end, back end, database)
+- Create an optional Internet Gateway to connect VCN subnet with Internet. Instances created in this subnet will have a public IP address.
+- Create Route table with route rules for Internet access
+- Create Security List to allow relevant ports for ingress and egress access
 
 1. Create a Virtual Cloud Network with Public Subnets:
 
@@ -49,7 +51,7 @@ A Virtual Cloud Network (VCN) is a virtual version of a traditional network incl
 
 3. Select a compartment on the left that you have permission to work in.
 
-    ![](media/image001.png)
+    ![Select a compartment](media/image001.png)
 
 4. Click **Create Virtual Cloud Network** and enter the following details:
 
