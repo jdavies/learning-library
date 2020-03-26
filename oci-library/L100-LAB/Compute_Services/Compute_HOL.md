@@ -23,7 +23,7 @@ Be sure to review [Best Practices for Your Compute Instance](https://docs.cloud.
 - Oracle Cloud Infrastructure account credentials (User, Password, and Tenant)
 - To sign in to the Console, you need the following:
   - Tenant, User name and Password
-  - URL for the Console: [https://console.us-ashburn-1.oraclecloud.com/](https://console.us-ashburn-1.oraclecloud.com/)
+  - URL for the Console: [https://oracle.com/](https://oracle.com/)
   - Oracle Cloud Infrastructure supports the latest versions of Google Chrome, Firefox and Internet Explorer 11
 
 ## Practice 1: Generate SSH Keys
@@ -37,6 +37,8 @@ Generate SSH keys to be used later while launching an instance.
     ```shell
       ssh-keygen
     ```
+
+    If you already have an ~/.ssh/id_rsa file and want to create a new key with a different key name, use the following command, type in the file name when prompted. The new fie will be stored in your `~/.ssh` folder.
 
 2. Make sure permissions are restricted, sometimes ssh will fail if private keys have permissive permissions.
 
@@ -68,7 +70,7 @@ Your identification has been saved in /c/Users/username/.ssh/id\_rsa.
 Your public key has been saved in /c/Users/username/.ssh/id\_rsa.pub.  
 ```
 
-**Note**: In Gitbash, C:\\Users\\username\\ is shown as /c/Users/username/
+**Note**: In Gitbash, the directory `C:\\Users\\username\\` is shown as `/c/Users/username/`
 
 **NOTE**
 These instructions will create a minimally secure ssh key for you (***and one well suited for this tutorial***). For production environments we recommend an SSH-2 RSA key with 4096 bits and a passphrase. For example:
@@ -177,7 +179,7 @@ An Oracle Cloud Infrastructure VM compute instance runs on the same hardware as 
 
 13. Navigate to `http://<public_ip_address>` (the IP address of the Linux VM) in your browser. And now you should see the index page of the webserver we created above.
 
-    ![Open you brwser to the public IP address](media/image13.png)
+    ![Open your browser to the public IP address](media/image13.png)
 
 ### Troubleshooting
 
