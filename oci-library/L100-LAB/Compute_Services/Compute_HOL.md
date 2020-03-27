@@ -73,8 +73,17 @@ Your public key has been saved in /c/Users/username/.ssh/id\_rsa.pub.
 **Note**: In Gitbash, the directory `C:\\Users\\username\\` is shown as `/c/Users/username/`
 
 **NOTE**
-These instructions will create a minimally secure ssh key for you (***and one well suited for this tutorial***). For production environments we recommend an SSH-2 RSA key with 4096 bits and a passphrase. For example:
-```ssh-keygen -t rsa -b 4096 -N "<myPassphrase>" -f ~/keys/id_rsa -C "This is my comment"```
+These instructions will create a minimally secure ssh key for you (***and one well suited for this tutorial***). For production environments we recommend an SSH-2 RSA key with 4096 bits and a passphrase. Here is the sample command format:
+
+```shell
+ssh-keygen -t rsa -b 4096 -N "<myPassphrase>" -f <key file name> -C "This is my comment"
+```
+
+And for a concrete example:
+
+```shell
+ssh-keygen -t rsa -b 4096 -N "MySecretPhrase" -f my_oci_key -C "This is my comment"
+```
 
 ## Practice 2: Creating a Web Server on a Compute Instance
 
