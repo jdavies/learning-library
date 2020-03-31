@@ -18,6 +18,8 @@ Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts,
 
 Be sure to review [Best Practices for Your Compute Instance](https://docs.cloud.oracle.com/iaas/Content/Compute/References/bestpracticescompute.htm) for important information about working with your Oracle Cloud Infrastructure Compute instance.
 
+You can view a video of this labe here: [https://youtu.be/0DHEz-2l9ck](https://youtu.be/0DHEz-2l9ck)
+
 ## Pre-Requisites
 
 - Oracle Cloud Infrastructure account credentials (User, Password, and Tenant)
