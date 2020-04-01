@@ -16,6 +16,8 @@
 
 The Oracle Cloud Infrastructure Block Volume service lets you dynamically provision and manage block storage volumes . You can create, attach, connect and move volumes as needed to meet your storage and application requirements. Once attached and connected to an instance, you can use a volume like a regular hard drive. Volumes can also be disconnected and attached to another instance without the loss of data.
 
+You can see a video of this lab on [Youtube](https://youtu.be/GDo90RVVU_I)
+
 ## Pre-Requisites
 
 - Oracle Cloud Infrastructure account credentials (User, Password, and Tenant)
@@ -37,6 +39,7 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
    - **Availability Domain:** It must be the same as the AD you choose for your instance.
    - **Size**: Please choose **50 GB**.
    - **Backup Policy**: **Gold**
+   - **Volume Performance**: **Lower Cost**
 
     **Note**: Must be between **50 GB** and **32 TB**. You can choose in 1 GB increments within this range. The default is 1024 GB)
 
@@ -48,10 +51,13 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
     - **Gold Policy**: The gold policy includes daily incremental backups. These backups are retained for seven days. This policy also includes weekly incremental backups that run on Sunday and are retained for four weeks. Also includes monthly incremental backups, run on the first day of the month, retained for twelve months, and a full backup, run yearly on January 1st. Full backups are retained for five years.
 
-3. Leave the encryption and tags options as their default values and click on **Create Block Volume**. The volume will be ready to attach once its icon no longer lists it as **PROVISIONING** in the volume list.
+3. Leave the encryption and tags options as their default values and click on **Create Block Volume**.
 
    ![Creating step 1](media/Create1.png)
+
+   The volume will be begin the provisioning process. This process will only take a few seconds.
    ![Block volume still provisioning](media/image002.png)
+   The volume will be ready to attach once its icon turns green and its status changes to **AVAILABLE**.
    ![Block volume fully provisioned and ready for use](media/image003.png)
 
 ## Practice 2: Attaching a Block Volume to an instance
@@ -88,12 +94,16 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
 7. Once the disk is attached, you can run the following commands to format the disk and mount it.
 
-     ```shell
-     # ls -l /dev/oracleoci/oraclevd*
-    # sudo mkfs -t ext4 /dev/oracleoci/oraclevdb
-     Press y when prompted
-    # sudo mkdir /mnt/disk1
-     # sudo mount /dev/oracleoci/oraclevdb /mnt/disk1
+    ```shell
+    ls -l /dev/oracleoci/oraclevd*
+    sudo mkfs -t ext4 /dev/oracleoci/oraclevdb
+    ```
+
+    Press y when prompted
+
+    ```shell
+    sudo mkdir /mnt/disk1
+    sudo mount /dev/oracleoci/oraclevdb /mnt/disk1
     ```
 
     ![The output of the df command](media/image009.png)
