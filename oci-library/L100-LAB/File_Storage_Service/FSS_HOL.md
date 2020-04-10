@@ -12,6 +12,8 @@
 
 [Practice-3: Mounting a File System](#practice-3-mounting-a-file-system)
 
+You can also view a video of this lab on [Youtube](https://youtu.be/6SCI8TdWeP8)'
+
 **Note:** *Some of the UIs might look a little different than the screen shots included in the instructions, but you can still use the instructions to complete the hands-on labs.*
 
 ## Overview
