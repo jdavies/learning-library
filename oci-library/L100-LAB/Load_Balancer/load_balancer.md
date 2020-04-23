@@ -171,7 +171,7 @@ You will create two web servers that will work as backend servers for your Publi
 
 ## Practice-3: Creating and Testing the Load Balancer
 
-1. In the Console, click **Menu** --> **Networking** --> **Load Balancers**. Click **Create Load Balancer** and enter the following paremeters:
+1. In the Console, click **Menu** --> **Networking** --> **Load Balancers**. Click **Create Load Balancer** and enter the following parameters:
 
    - **Name:** *LB-Web-Servers*
    - **Visibility Type:** *Public Load Balancer*
@@ -179,18 +179,20 @@ You will create two web servers that will work as backend servers for your Publi
    - **Virtual Cloud Network:** *VCN-WEB*
    - **Subnet:** *lb-subnet(regional)*
    - Press the **Next Step** button
+  ![](media/CreateLoadBalancer2.png)
    - **Load Balancing Policy:** *Weighted Round Robin*
    - Press the **Add  Backends** button
-   - Select both web servers
-   ![](media/addBackends1.png)
+   - Select both web servers and add them.
+  ![](media/addBackends1.png)
    - Press the **Next Step** button
+  ![](media/CreateLoadBalancer3.png)
    - Click the **HTTP** option and ensure the port is set to **80**.
    - Press the **Create Load Balancer** button.
 
     **Note:** When a load balancer is created, you're assigned a public IP address to which you route all incoming traffic. The IP address is highly available across ADs.
 ![](media/lbdetails1.png)
 
-2. Update the **LB-Security-List** to allow Internet Traffic to the Listener. Go to your VCN details page and perform the following tasks:
+1. Update the **LB-Security-List** to allow Internet Traffic to the Listener. Go to your VCN details page and perform the following tasks:
 
     - Click **Security Lists**
     - Click on the **LB-Security-List**. This displays the details of the LB Security List
@@ -201,7 +203,7 @@ You will create two web servers that will work as backend servers for your Publi
       - Click *Add Ingress Rules*
         ![](media/image13.png)
 
-3. On the left side click on  **Egress Rules**, click **Add Egress Rules** and Enter the following egress rule: 
+2. On the left side click on  **Egress Rules**, click **Add Egress Rules** and Enter the following egress rule: 
 
     - **Source CIDR:** *0.0.0.0/0*
     -  **IP Protocol:** *All Protocols*
@@ -209,7 +211,7 @@ You will create two web servers that will work as backend servers for your Publi
 
         ![](media/image19.png)
 
-4. Update the **Web Security List** to allow traffic from Load Balancer to your Web-Servers. Go to your VCN details page and perform the following tasks:
+3. Update the **Web Security List** to allow traffic from Load Balancer to your Web-Servers. Go to your VCN details page and perform the following tasks:
 
     - Click **Security Lists**
     - Click on the **Web-Security-List**. This displays the details of the Web Security List
@@ -220,7 +222,7 @@ You will create two web servers that will work as backend servers for your Publi
       - Click *Add Ingress Rules*
         ![](media/image10.png)
 
-5. Test the functionality of the load balancer by navigating to its public IP address on a web browser.
+4. Test the functionality of the load balancer by navigating to its public IP address on a web browser.
     
     **Note:** This might take a few minutes to work as LB will perform a health check after enable the Security Rules. 
 
