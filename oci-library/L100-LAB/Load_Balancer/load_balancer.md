@@ -143,30 +143,30 @@ You will create two web servers that will work as backend servers for your Publi
 
    - Install HTTP Server:
 	```
-	# sudo yum install httpd -y
+	sudo yum install httpd -y
 	```
    - Start the apache server and configure it to start after system reboots:
     ```
-    # sudo apachectl start
-    # sudo systemctl enable httpd
+    sudo apachectl start
+    sudo systemctl enable httpd
     ```
    - Run a quick check on apache configurations:
     ```
-    # sudo apachectl configtest
+    sudo apachectl configtest
     ```
    - Create firewall rules to allow access to the ports on which the HTTP server listens.
     ```
-    # sudo firewall-cmd --permanent --zone=public --add-service=http 
-    # sudo firewall-cmd --reload
+    sudo firewall-cmd --permanent --zone=public --add-service=http 
+    sudo firewall-cmd --reload
     ```
    - Create an index file for your **Web-Server-1**:
     ```
-    # sudo bash -c 'echo This is my Web-Server-1 running on Oracle Cloud Infrastructure >> /var/www/html/index.html'
+    sudo bash -c 'echo This is my Web-Server-1 running on Oracle Cloud Infrastructure >> /var/www/html/index.html'
     ```
 
    - Create an index file for your **Web-Server-2**:
     ```
-    # sudo bash -c 'echo This is my Web-Server-2 running on Oracle Cloud Infrastructure >> /var/www/html/index.html'
+    sudo bash -c 'echo This is my Web-Server-2 running on Oracle Cloud Infrastructure >> /var/www/html/index.html'
     ```
 
 ## Practice-3: Creating and Testing the Load Balancer
