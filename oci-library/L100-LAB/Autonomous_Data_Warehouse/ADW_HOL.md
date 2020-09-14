@@ -36,30 +36,36 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 ## Practice 1: Download channel text file and install SQL Developer Tool
 
-**1.** Download a zip file from this link: [http://bit.ly/2yOzzVE](http://bit.ly/2DRpVFR) and save it to your desktop.
+1. Create a channel.txt file on your desktop and edit it so that it has the following contents:
 
-**2.** Unzip the file and you will see a channel.txt file
+    ```text
+    S,Direct Sales,Direct
+    T,Tele Sales,Direct
+    C,Catalog,Indirect
+    I,Internet,Indirect
+    P,Partners,Others
+    ```
 
-> **Note:**  This file will be loaded into Object Storage and later used to load data into the CHANNELS table.
+    > **Note:**  This file will be loaded into Object Storage and later used to load data into the CHANNELS table.
 
-**3.** Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) and install on your local computer.
+2. Download SQL Developer Tool from this link: [https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html](https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html.html) and install on your local computer.
 
 ## Practice 2: Sign in to OCI Console
 
 **1.** Open a supported browser and go to the Console URL. For example, [https://cloud.oracle.com](https://cloud.oracle.com). Click on the profile icon at the top and then click on the *Sign in to Cloud* link.
-![](img/login1.png)
+![Start the login process](img/login1.png)
 
 **2.** Enter your tenant name: *You should have received one when you registered for your trial* and click **Next**
 
- ![](img/login2.png)
+ ![Enter your tenancy nme (aka account name)](img/login2.png)
 
 **3.** Enter your user name and password and click on **Sign In**
 
- ![](img/image002.png)
+ ![Enter your credentials](img/image002.png)
 
 When you sign in to the Console, the home page is displayed.
 
- ![]( img/image004.png)
+ ![Home page is shown]( img/image004.png)
 
 The home page gives you quick links to the documentation and to Oracle Support.
 
@@ -68,25 +74,26 @@ The home page gives you quick links to the documentation and to Oracle Support.
 > **Note**: Make sure you are on us-phoenix-1 region. You can see your region at the right up corner of the page.
 
 **1.** Click on **Menu** > **Autonomous Data Warehouse** 
-![]( img/menu1.png)
+![Main menu]( img/menu1.png)
 
-**2.** Select your Comparment and click **Create Autonomous Data Warehouse** 
+**2.** Select your Compartment and click **Create Autonomous Data Warehouse** 
 
-![]( img/create1.png)
+![Click the create button]( img/create1.png)
 
 **3.** In the Create Autonomous Data Warehouse dialog, enter the following information:
- - **Display Name**: ADWTEST
- - **Database Name**: ADWTEST
- - **CPU Core Count**: 1
- - **Storage**: 1
- - **Password**: *OracleAxt8Qr*
- - Click the **Create Autonomous Database** button.
 
-![]( img/create2.png)
+- **Display Name**: ADWTEST
+- **Database Name**: ADWTEST
+- **CPU Core Count**: 1
+- **Storage**: 1
+- **Password**: *OracleAxt8Qr*
+- Click the **Create Autonomous Database** button.
+
+![Click the create button]( img/create2.png)
 
 **4.** Once the ADW database is provisioned, click on the database name to get on details page:
 
-![]( img/ADWTEST1.png)
+![ADW Details page]( img/ADWTEST1.png)
 
 ## Practice 4: Download a Connection Wallet for ADW Database
 
@@ -94,17 +101,17 @@ Oracle connection wallet are downloaded from the Autonomous Data Warehouse Cloud
 
 **1.** On the details page of your ADW, click on **Service Console**
  
- ![]( img/ADWTEST2.png)
+ ![Click on service console]( img/ADWTEST2.png)
 
 **2.** On the left side of the page click on **Administration**
 
 **3.** Click on **Download a Connection Wallet** 
 
-![]( img/ADWTEST3.png)
+![Click on Download Connection Wallet]( img/ADWTEST3.png)
 
 **4.** You must protect this file to prevent unauthorized database access. Therefore, you need to create a password to protect this file. For this exercise enter the same password you used on Practice-3 *OracleAxt8Qr* and click **Download** and save it to your *Downloads* folder
 
-![]( img/image013.png)
+![Password protect the file]( img/image013.png)
 
 ## Practice 5: Create a bucket in Object Storage and upload the text file
 
@@ -119,15 +126,15 @@ To load data from files in the cloud into your Autonomous DW Cloud database, use
 
 - **Bucket Name**: ADW_Bucket
 - **Storage Tier**: Standard
-	
+
 **4.** Click **Create Bucket** 
-![]( img/createBucket.png)
+![Create te bucket]( img/createBucket.png)
 
 **5.** Click on the *ADW-Bucket* link to see its details page.
-![]( img/clickBucketName.png)
+![View the bucket's details page]( img/clickBucketName.png)
 
 **6.** Upload the channels.txt file to the *ADW_Bucket*
-![]( img/upload1.png)
+![Upload the channels.txt file]( img/upload1.png)
 
 ![]( img/upload2.png)
 
